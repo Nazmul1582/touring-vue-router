@@ -17,6 +17,12 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/About.vue"),
     },
+    {
+      path: "/spots/:id",
+      name: "spot-details",
+      component: () => import("@/views/SpotDetails.vue"),
+      props: true, // 👈 Enables automatic props from route
+    },
   ],
 })
 
